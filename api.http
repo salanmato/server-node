@@ -1,0 +1,37 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title":"Festa de Atlética",
+    "details": "Festa de introdução aos bixos",
+    "maximumAttendees": 1200
+}
+
+###
+
+POST http://localhost:3333/events/c8d28b93-de84-45dc-a7d6-e0a9ed2c6f5b/attendees
+Content-Type: application/json
+
+{
+    "name" : "Roronoa Zoro",
+    "email" : "esqueci@meuemail.com"
+}
+
+
+###
+
+GET http://localhost:3333/events/c8d28b93-de84-45dc-a7d6-e0a9ed2c6f5b
+
+###
+
+GET http://localhost:3333/attendees/3/badge
+
+
+###
+
+GET http://localhost:3333/attendees/1/check-in
+
+###
+
+GET http://localhost:3333/events/c8d28b93-de84-45dc-a7d6-e0a9ed2c6f5b/attendees?query=Roronoa
+
